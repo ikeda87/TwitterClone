@@ -5,17 +5,22 @@
       <h2><%= pluralize(toukou.errors.count, "error") %> prohibited this toukou from being saved:</h2>
       <ul>
       <% toukou.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
   <div class="field">
-    <%= form.label :本文 %>
+    <%= form.label :投稿内容 %>
     <%= form.text_area :content %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :決定%>
+      <%= link_to '投稿一覧へ', new_toukou_path %>
   </div>
 <% end %>
+
+<footer>
+<p>株式会社Twitter</p>
+</footer>
