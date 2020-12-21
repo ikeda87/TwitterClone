@@ -3,6 +3,26 @@
   "private": true,
   "dependencies": {
     "bootstrap": "3",
-    "jquery": "^3.4.1"
-  }
+    "jquery": "^3.5.1"
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikeda87/twitterclonetest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikeda87/twitterclonetest/issues"
+  },
+  "homepage": "https://github.com/ikeda87/twitterclonetest#readme"
 }
