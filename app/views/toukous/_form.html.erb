@@ -11,12 +11,12 @@
     </div>
   <% end %>
   <div class="field">
-    <%= form.label :投稿内容 %>
+    <%= form.label :content, "投稿内容" %>
     <%= form.text_area :content %>
   </div>
 
   <div class="actions">
-    <%= form.submit :決定%>
-      <%= link_to '投稿一覧へ', new_toukou_path %>
+    <%= form.submit :"決定" %>
+    <%= link_to '投稿一覧へ', new_toukou_path %>
   </div>
 <% end %>
