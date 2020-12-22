@@ -1,22 +1,21 @@
-<%= form_with(model: toukou, local: true, url: choose_new_or_edit ) do |form| %>
-
-  <% if toukou.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(toukou.errors.count, "error") %> prohibited this toukou from being saved:</h2>
-      <ul>
-      <% toukou.errors.full_messages.each do |message| %>
-        <li><%= msg %></li>
+<%= form_with(model: @toukou, local: true, url: choose_new_or_edit) do |form| %>
+  <% if @toukou.errors.any? %>
+      <div id="error_explanation">
+      <h2>エラーは、<%= @toukou.errors.count %>件あります。</h2>
+　      <ul>
+　　      <% @toukou.errors.full_messages.each do |msg| %>
+           <li><%= msg %></li>
+            <% end %>
+        </ul>
+      </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="field">
+   <div class="field">
     <%= form.label :content, "投稿内容" %>
-    <%= form.text_area :content %>
-  </div>
+    <%= form.text_field :content %>
+   </div>
 
   <div class="actions">
     <%= form.submit :"決定" %>
     <%= link_to '投稿一覧へ', new_toukou_path %>
   </div>
-<% end %>
+  <% end %>

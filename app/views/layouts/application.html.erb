@@ -7,23 +7,18 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
   <header>
       <nav class="navbar navbar-light bg-light">
         <span class="navbar-text"  width="30" height="30" alt="">
-        <p>ようこそツイッタークローンへ！！</p>
+        <p>ようこそツイッタークローンへ</p>
         </span>
       </nav>
   </header>
-
-  <%= image_tag 'bluebird_baka.png', width: '300px' %>
+  <%= image_tag 'bluebird.png', width: '300px' %>
   <%= yield %>
-
   <footer>
   <p>株式会社Twitter</p>
   </footer>
-  
 </body>
-
 </html>

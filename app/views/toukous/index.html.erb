@@ -1,24 +1,30 @@
+<!DOCTYEP html>
+<html lang="ja">
+<head>
+  <title>Index Page</title>
+</head>
+  <body>
+    <header>
+     <h3>投稿一覧</h3>
+    </header>
 <div class="notice">
 <p><%= notice %></p></div>
-
 <table class = "index_table">
-<h2><tr><th>投稿内容</th></tr><h2>
-
 <% @toukous.each do |toukou| %>
-
   <tr>
-    <td colspan="2"><%= toukou.content %></td>
-    <td><button><%= link_to '編集', edit_toukou_path(toukou.id), data: { confirm: '本当に編集していいですか？' } %></button></td>
+    <td colspan="3"><%= toukou.content %></td>
+    <td><button><%= link_to '編集', edit_toukou_path(toukou.id), data: { confirm: '編集していいですか？' } %></button></td>
     <td><button><%= link_to "詳細", toukou_path(toukou.id) %></button></td>
     <td><button><%= link_to '削除', toukou_path(toukou.id), method: :delete, data: { confirm: '削除してよいですか？' } %></button></td>
   </tr>
-
 <% end %>
 </table>
-
 <table>
-<h1><%= link_to '『投稿する』こちらをクリックしてください！', new_toukou_path %></h1>
+  <h3><%= link_to '『投稿する』をクリックしてください', new_toukou_path %></h3>
 </table>
-<br>
-<br>
-<br>
+  <br><br>
+  <footer>
+  <p class="position">Let's toukou</p>
+  </footer>
+  </body>
+</html>

@@ -1,13 +1,10 @@
-<header>
-<a>株式会社Twitter</a>
-</header>
 
-<h3>以下の内容で投稿します。</h3>
+  <h3>以下の内容で投稿します。</h3>
 
-<%= form_with(model: @toukou, local: true) do |form| %>
-<%= form.hidden_field :content %>
+  <%= form_with(model: @toukou, local: true) do |form| %>
+  <%= form.hidden_field :content %>
   <p>本文:<%= @toukou.content %></p>
   <%= form.submit "投稿する", name: 'submit' %>
   <%= form.submit "戻る", name: 'back' %>
-
-<% end %>
+  <br>
+  <% end %>
