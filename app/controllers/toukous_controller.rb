@@ -53,11 +53,11 @@ class ToukousController < ApplicationController
   end
 
   private
-    def set_toukou
+  def set_toukou
       @toukou = Toukou.find(params[:id])
-    end
+  end
 
-    def toukou_params
+  def toukou_params
       params.require(:toukou).permit(:content)
-    end
+  end
 end
